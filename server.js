@@ -7,17 +7,17 @@ const PORT = process.env.PORT || 3000;
 // Serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
-// Bird Data
-const birds = [
-    { id: 1, name: "Robin", sound: "/sounds/robin.mp3", info: "Robins are small, red-breasted birds." },
-    { id: 2, name: "Sparrow", sound: "/sounds/sparrow.mp3", info: "Sparrows are small, brown birds found worldwide." },
-    { id: 3, name: "Blue Jay", sound: "/sounds/bluejay.mp3", info: "Blue Jays are known for their striking blue feathers." },
-    // Add 9 more birds
+// Shloka Data
+const shlokas = [
+    { id: 1, name: "Gayatri Mantra", sound: "/shlokas/gayatri.mp3", info: "Gayatri Mantra is a universal prayer from the Rigveda." },
+    { id: 2, name: "Maha Mrityunjaya", sound: "/shlokas/maha_mrityunjaya.mp3", info: "A powerful mantra for health and well-being." },
+    { id: 3, name: "Hanuman Chalisa", sound: "/shlokas/hanuman_chalisa.mp3", info: "40 verses praising Lord Hanuman." },
+    // Add more shlokas
 ];
 
-// API endpoint to get bird data
-app.get("/birds", (req, res) => {
-    res.json(birds);
+// API endpoint to get shloka data
+app.get("/shlokas", (req, res) => {
+    res.json(shlokas);
 });
 
 app.listen(PORT, () => {
